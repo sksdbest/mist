@@ -40,12 +40,13 @@
         }
 
         .header-container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
         }
 
         .logo {
@@ -103,9 +104,10 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 60px 30px;
+            width: 100%;
         }
 
         #home .container {
@@ -484,8 +486,8 @@
 
         .hero-slider {
             position: relative;
-            width: 85%;
-            max-width: 950px;
+            width: 90%;
+            max-width: 1000px;
             height: 500px;
             margin: 40px auto;
             overflow: hidden;
@@ -637,10 +639,162 @@
             }
         }
 
-        @media (max-width: 768px) {
+        /* ===== RESPONSIVE DESIGN ===== */
+
+        /* Tablet Devices (768px to 1024px) */
+        @media (max-width: 1024px) {
+            .container {
+                max-width: 95%;
+                padding: 50px 20px;
+            }
+
+            .header-container {
+                max-width: 95%;
+                padding: 0 15px;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .logo-image {
+                width: 35px;
+                height: 35px;
+            }
+
+            nav {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            h2 {
+                font-size: 26px;
+                margin-bottom: 25px;
+            }
+
+            h3 {
+                font-size: 17px;
+            }
+
+            .research-item-wrapper {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .funding-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .team-members {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .home-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
+            }
+
+            .hero-slider {
+                width: 90%;
+                height: 400px;
+            }
+        }
+
+        /* Mobile Devices (480px to 767px) */
+        @media (max-width: 767px) {
+            .container {
+                max-width: 100%;
+                padding: 40px 15px;
+            }
+
+            .header-container {
+                max-width: 100%;
+                padding: 0 12px;
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                font-size: 18px;
+                gap: 8px;
+            }
+
+            .logo-image {
+                width: 30px;
+                height: 30px;
+            }
+
+            .logo span {
+                font-size: 11px;
+            }
+
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: flex-start;
+                margin-top: 10px;
+                order: 3;
+            }
+
+            nav a {
+                font-size: 11px;
+                padding: 5px 10px;
+                border: 1px solid var(--border-color);
+                border-radius: 4px;
+            }
+
+            h2 {
+                font-size: 22px;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-size: 16px;
+                margin-top: 20px;
+                margin-bottom: 12px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .research-item {
+                margin-bottom: 30px;
+            }
+
+            .research-item-wrapper {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .research-image {
+                max-height: 250px;
+            }
+
+            .funding-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .team-members {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .member-image {
+                height: 180px;
+            }
+
+            .member-card {
+                padding: 15px;
+            }
+
+            .home-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .home-image-section {
@@ -651,21 +805,102 @@
             .home-image {
                 max-width: 100%;
             }
+
+            .hero-slider {
+                width: 100%;
+                max-width: 100%;
+                height: 300px;
+                margin: 0;
+                left: 0;
+                transform: none;
+            }
+
+            .slider-nav {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .slider-controls {
+                bottom: 10px;
+                gap: 8px;
+            }
+
+            .publication-item {
+                padding: 15px;
+            }
+
+            .contact-info {
+                max-width: 100%;
+            }
+        }
+
+        /* Small Mobile Devices (Below 480px) */
+        @media (max-width: 479px) {
+            .container {
+                max-width: 100%;
+                padding: 30px 12px;
+            }
+
+            .header-container {
+                padding: 0 10px;
+            }
+
+            .logo {
+                font-size: 16px;
+                gap: 6px;
+            }
+
+            .logo-image {
+                width: 28px;
+                height: 28px;
+            }
+
+            .logo span {
+                font-size: 10px;
+            }
+
             nav {
-                gap: 15px;
-                flex-wrap: wrap;
+                gap: 8px;
+                width: 100%;
             }
 
             nav a {
-                font-size: 12px;
-            }
-
-            .hero h1 {
-                font-size: 26px;
+                font-size: 10px;
+                padding: 4px 8px;
             }
 
             h2 {
-                font-size: 22px;
+                font-size: 20px;
+                margin-bottom: 18px;
+            }
+
+            h3 {
+                font-size: 15px;
+            }
+
+            .hero h1 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            ul, ol {
+                margin-left: 15px;
+            }
+
+            li {
+                margin-bottom: 6px;
+            }
+
+            .research-item {
+                margin-bottom: 25px;
+            }
+
+            .research-image {
+                max-height: 200px;
             }
 
             .funding-grid {
@@ -676,8 +911,94 @@
                 grid-template-columns: 1fr;
             }
 
+            .member-card {
+                padding: 12px;
+            }
+
             .member-image {
-                height: 200px;
+                height: 150px;
+            }
+
+            .hero-slider {
+                width: 100%;
+                height: 250px;
+                margin: 0;
+            }
+
+            .slider-nav {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+            }
+
+            .slider-dot {
+                width: 8px;
+                height: 8px;
+            }
+
+            footer {
+                padding: 20px 12px;
+                font-size: 12px;
+            }
+
+            .contact-info {
+                padding: 20px 15px;
+            }
+        }
+
+        /* Desktop Large Screens (1440px and above) */
+        @media (min-width: 1440px) {
+            .container {
+                max-width: 1400px;
+                padding: 80px 40px;
+            }
+
+            .header-container {
+                max-width: 1400px;
+                padding: 0 40px;
+            }
+
+            .logo {
+                font-size: 26px;
+            }
+
+            .logo-image {
+                width: 45px;
+                height: 45px;
+            }
+
+            nav {
+                gap: 40px;
+            }
+
+            nav a {
+                font-size: 15px;
+            }
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 35px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .research-item-wrapper {
+                gap: 40px;
+            }
+
+            .funding-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .team-members {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .hero-slider {
+                width: 90%;
+                height: 550px;
             }
         }
     </style>
@@ -1535,19 +1856,29 @@
             <h3>2025 Publications</h3>
             <div class="publication-list">
                 <div class="publication-item">
+                    <p><strong>Gradient-Guided Adversarial Patch Attack for Deep Neural Networks</strong></p>
+                    <p style="color: var(--text-light); font-size: 14px;">R Kumar, U Kashyap, SS Ali</p>
+                    <p style="color: var(--text-light); font-size: 13px; margin-top: 8px;">International Conference on Security, Privacy, and Applied Cryptography (SPACE), 2025 | <a href="https://scholar.google.com/citations?user=BdDCoeEAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+                </div>
+                <div class="publication-item">
+                    <p><strong>Fluorescent-Tagged Amphiphilic Polymers for Dual-Functional para-Nitrophenol Sensing and Remediation</strong></p>
+                    <p style="color: var(--text-light); font-size: 14px;">S Maity, B Sahu, N Singh, SK Padhi, SKS Ali, S Banerjee</p>
+                    <p style="color: var(--text-light); font-size: 13px; margin-top: 8px;">ACS ES&T Engineering, 2025 | <a href="https://scholar.google.com/citations?user=BdDCoeEAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+                </div>
+                <div class="publication-item">
                     <p><strong>De-Fake: Style based Anomaly Deepfake Detection</strong></p>
-                    <p style="color: var(--text-light); font-size: 14px;">ArXiv 2507.03334 (2025)</p>
-                    <p style="color: var(--text-light); font-size: 13px; margin-top: 8px;"><a href="https://arxiv.org/abs/2507.03334" target="_blank">arXiv</a> | <a href="https://scholar.google.com/citations?user=BdDCoeEAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+                    <p style="color: var(--text-light); font-size: 14px;">SK Padhi, H Kumar, U Kashyap, SS Ali</p>
+                    <p style="color: var(--text-light); font-size: 13px; margin-top: 8px;"><a href="https://arxiv.org/abs/2507.03334" target="_blank">arXiv:2507.03334</a> (2025) | <a href="https://scholar.google.com/citations?user=BdDCoeEAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+                </div>
+                <div class="publication-item">
+                    <p><strong>Is Perceptual Encryption Secure? A Security Benchmark for Perceptual Encryption Methods</strong></p>
+                    <p style="color: var(--text-light); font-size: 14px;">U Kashyap, SK Padhi, SS Ali</p>
+                    <p style="color: var(--text-light); font-size: 13px; margin-top: 8px;">IEEE Transactions on Artificial Intelligence, 2025 | <a href="https://scholar.google.com/citations?user=BdDCoeEAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
                 </div>
                 <div class="publication-item">
                     <p><strong>Deep Learning-based Dual Watermarking for Image Copyright Protection and Authentication</strong></p>
-                    <p style="color: var(--text-light); font-size: 14px;">ArXiv 2502.18501 (2025)</p>
-                    <p style="color: var(--text-light); font-size: 13px; margin-top: 8px;"><a href="https://arxiv.org/abs/2502.18501" target="_blank">arXiv</a> | <a href="https://scholar.google.com/citations?user=BdDCoeEAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
-                </div>
-                <div class="publication-item">
-                    <p><strong>Gradient-Guided Adversarial Patch Attack for Deep Neural Networks</strong></p>
-                    <p style="color: var(--text-light); font-size: 14px;">(2025)</p>
-                    <p style="color: var(--text-light); font-size: 13px; margin-top: 8px;"><a href="https://scholar.google.com/citations?user=BdDCoeEAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+                    <p style="color: var(--text-light); font-size: 14px;">SK Padhi, Archana Tiwari, SS Ali</p>
+                    <p style="color: var(--text-light); font-size: 13px; margin-top: 8px;"><a href="https://arxiv.org/abs/2502.18501" target="_blank">arXiv:2502.18501</a> (2025) | <a href="https://scholar.google.com/citations?user=BdDCoeEAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
                 </div>
             </div>
 
@@ -1877,7 +2208,7 @@
                             <h4>Umesh Kashyap</h4>
                             <div class="member-role">Ph.D. Student</div>
                             <div class="member-contact">
-                                <div class="member-email"><a href="mailto:umesh.kashyap@iitbhilai.ac.in">umesh.kashyap@iitbhilai.ac.in</a></div>
+                                <div class="member-email"><a href="mailto:umeshk@iitbhilai.ac.in">umeshk@iitbhilai.ac.in</a></div>
                             </div>
                             <div class="member-links">
                                 <a href="https://www.linkedin.com/in/umesh-kashyap-491744172/" target="_blank" class="member-link" title="LinkedIn">in</a>
@@ -1893,7 +2224,7 @@
                             <h4>Deepesh Kumar Dwivedi</h4>
                             <div class="member-role">Ph.D. Student</div>
                             <div class="member-contact">
-                                <div class="member-email"><a href="mailto:deepesh.dwivedi@iitbhilai.ac.in">deepesh.dwivedi@iitbhilai.ac.in</a></div>
+                                <div class="member-email"><a href="mailto:deepeshkd@iitbhilai.ac.in">deepeshkd@iitbhilai.ac.in</a></div>
                             </div>
                             <div class="member-links">
                                 <a href="https://www.linkedin.com/in/deepesh-kumar-dwivedi-20460536a/" target="_blank" class="member-link" title="LinkedIn">in</a>
@@ -1909,7 +2240,7 @@
                             <h4>Shivani Singh</h4>
                             <div class="member-role">Ph.D. Student</div>
                             <div class="member-contact">
-                                <div class="member-email"><a href="mailto:shivani@iitbhilai.ac.in">shivani@iitbhilai.ac.in</a></div>
+                                <div class="member-email"><a href="mailto:shivanisingh@iitbhilai.ac.in">shivanisingh@iitbhilai.ac.in</a></div>
                             </div>
                             <div class="member-links">
                                 <a href="https://www.linkedin.com/in/shivani-singh-b85985229/" target="_blank" class="member-link" title="LinkedIn">in</a>
@@ -1925,7 +2256,7 @@
                             <h4>Pankaj Kashyap</h4>
                             <div class="member-role">Ph.D. Student</div>
                             <div class="member-contact">
-                                <div class="member-email"><a href="mailto:pankaj@iitbhilai.ac.in">pankaj@iitbhilai.ac.in</a></div>
+                                <div class="member-email"><a href="mailto:pankajkashyap@iitbhilai.ac.in">pankajkashyap@iitbhilai.ac.in</a></div>
                             </div>
                             <div class="member-links">
                                 <a href="https://www.linkedin.com/in/pankaj-kashyap-098141261/" target="_blank" class="member-link" title="LinkedIn">in</a>
@@ -2347,11 +2678,6 @@
                 <div class="contact-item">
                     <strong>Email</strong>
                     <p><a href="mailto:subidh@iitbhilai.ac.in">subidh@iitbhilai.ac.in</a></p>
-                </div>
-
-                <div class="contact-item">
-                    <strong>Phone</strong>
-                    <p>+91-771-255-1300 Extn. 6122</p>
                 </div>
 
                 <div class="contact-item">
